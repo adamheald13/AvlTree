@@ -5,15 +5,15 @@
 class Node
 {
 public:
-  Node* getLeft();
-  Node* getRight();
-  int getHeight();
-  City getCity();
-
-private:
+  Node(City city);
   Node *left;
   Node *right;
   int height;
+  int getHeight();
+  City getCity();
+  void setCity(City city);
+
+private:
   City city;
 };
 

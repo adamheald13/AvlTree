@@ -1,3 +1,4 @@
+#include <iostream>
 #include "City.h"
 using namespace std;
 
@@ -9,6 +10,10 @@ City::City(string name, int x, int y) {
   this->name = name;
   this->x = x;
   this->y = y;
+}
+
+void City::printCity() {
+  cout << this->name << " " << this->x << " " << this->y << " ";
 }
 
 string City::getName() {

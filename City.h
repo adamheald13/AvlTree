@@ -13,6 +13,8 @@ public:
   int getX();
   int getY();
 
+  void printCity();
+
 private:
   string name;
   int x, y;

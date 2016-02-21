@@ -1,11 +1,14 @@
 #include "Node.h"
 
-Node* Node::getLeft() {
-  return this->left;
+Node::Node(City city) {
+  this->city = city;
+  this->left = 0;
+  this->right = 0;
+  this->height = 0;
 }
 
-Node* Node::getRight() {
-  return this->right;
+void Node::setCity(City city) {
+  this->city = city;
 }
 
 int Node::getHeight() {
