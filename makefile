@@ -1,5 +1,5 @@
-Lab04: main.o City.o UnorderedArray.o AvlTree.o Node.o
-	g++ -g main.o City.o UnorderedArray.o AvlTree.o Node.o -o Lab04
+Lab05: main.o City.o UnorderedArray.o AvlTree.o Node.o
+	g++ -g main.o City.o UnorderedArray.o AvlTree.o Node.o -o Lab05
 main.o: main.cpp
 	g++ -g -c main.cpp
 City.o: City.cpp City.h

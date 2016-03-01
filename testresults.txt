@@ -1,0 +1,173 @@
+----- Near Cities in UnorderedArray -----
+City with matching coordinates found: Spiritburg (15, 20)
+Cities within specified distance:
+RadioCity 16 22
+
+----- Near Cities in AvlTree -----
+City with matching coordinates found: Spiritburg (15, 20)
+Cities within specified distance:
+RadioCity 16 22
+
+----- Near Cities in UnorderedArray -----
+City with matching coordinates found: Smithton (12, 13)
+Cities within specified distance:
+HendersonPlain 5 15
+Hooterville 20 12
+BaldwinCity 15 8
+MysticCaverns 13 5
+Spiritburg 15 20
+
+----- Near Cities in AvlTree -----
+City with matching coordinates found: Smithton (12, 13)
+Cities within specified distance:
+BaldwinCity 15 8
+HendersonPlain 5 15
+Hooterville 20 12
+MysticCaverns 13 5
+Spiritburg 15 20
+
+----- Near Cities in UnorderedArray -----
+City with matching coordinates found: BridgerRange (25, 20)
+Cities within specified distance:
+
+----- Near Cities in AvlTree -----
+City with matching coordinates found: BridgerRange (25, 20)
+Cities within specified distance:
+
+----- Near Cities in UnorderedArray -----
+City with matching coordinates found: Lexington (10, 25)
+Cities within specified distance:
+PrairieMeadows 9 26
+Sandyville 7 28
+Russellville 8 27
+
+----- Near Cities in AvlTree -----
+City with matching coordinates found: Lexington (10, 25)
+Cities within specified distance:
+Sandyville 7 28
+PrairieMeadows 9 26
+Russellville 8 27
+
+----- Near Cities in UnorderedArray -----
+City with matching coordinates found: origin (0, 0)
+Cities within specified distance:
+HendersonPlain 5 15
+PrairieMeadows 9 26
+Hooterville 20 12
+Jonesville 21 12
+JamesTown 25 32
+Sandyville 7 28
+Lexington 10 25
+Williamsburg 3 7
+BaldwinCity 15 8
+Pultneyville 25 5
+Monroeville 20 0
+SnowySummit 24 29
+MysticCaverns 13 5
+Smithton 12 13
+RadioCity 16 22
+AncientCity 15 29
+Anywhereville 18 24
+HighCityHeights 0 15
+Monterey 27 26
+BridgerRange 25 20
+CrashLanding 20 27
+Spiritburg 15 20
+FortHays 6 29
+Russellville 8 27
+
+----- Near Cities in AvlTree -----
+City with matching coordinates found: origin (0, 0)
+Cities within specified distance:
+Jonesville 21 12
+BaldwinCity 15 8
+Sandyville 7 28
+AncientCity 15 29
+HendersonPlain 5 15
+PrairieMeadows 9 26
+Williamsburg 3 7
+Anywhereville 18 24
+CrashLanding 20 27
+Hooterville 20 12
+Monroeville 20 0
+RadioCity 16 22
+SnowySummit 24 29
+BridgerRange 25 20
+FortHays 6 29
+HighCityHeights 0 15
+JamesTown 25 32
+Lexington 10 25
+MysticCaverns 13 5
+Pultneyville 25 5
+Russellville 8 27
+Smithton 12 13
+Spiritburg 15 20
+
+----- Near Cities in UnorderedArray -----
+City with matching coordinates found: HighCityHeights (0, 15)
+Cities within specified distance:
+HendersonPlain 5 15
+
+----- Near Cities in AvlTree -----
+City with matching coordinates found: HighCityHeights (0, 15)
+Cities within specified distance:
+HendersonPlain 5 15
+
+----- Near Cities in UnorderedArray -----
+Cities within specified distance:
+Pultneyville 25 5
+Monroeville 20 0
+
+----- Near Cities in AvlTree -----
+Cities within specified distance:
+Monroeville 20 0
+Pultneyville 25 5
+
+----- Near Cities in UnorderedArray -----
+City with matching coordinates found: Pultneyville (25, 5)
+Cities within specified distance:
+Hooterville 20 12
+Jonesville 21 12
+Monroeville 20 0
+
+----- Near Cities in AvlTree -----
+City with matching coordinates found: Pultneyville (25, 5)
+Cities within specified distance:
+Jonesville 21 12
+Hooterville 20 12
+Monroeville 20 0
+
+----- Near Cities in UnorderedArray -----
+City with matching coordinates found: Pultneyville (25, 5)
+Cities within specified distance:
+Hooterville 20 12
+Jonesville 21 12
+BaldwinCity 15 8
+Monroeville 20 0
+
+----- Near Cities in AvlTree -----
+City with matching coordinates found: Pultneyville (25, 5)
+Cities within specified distance:
+Jonesville 21 12
+BaldwinCity 15 8
+Hooterville 20 12
+Monroeville 20 0
+
+----- Near Cities in UnorderedArray -----
+City with matching coordinates found: SnowySummit (24, 29)
+Cities within specified distance:
+JamesTown 25 32
+Monterey 27 26
+CrashLanding 20 27
+
+----- Near Cities in AvlTree -----
+City with matching coordinates found: SnowySummit (24, 29)
+Cities within specified distance:
+CrashLanding 20 27
+JamesTown 25 32
+
+----- Comparisons -----
+Number of comparisons for insertion on UnorderedArray: 0
+Number of comparisons for insertion on AvlTree: 112
+Number of comparisons for deletion on UnorderedArray: 402
+Number of comparisons for deletion on AvlTree: 40

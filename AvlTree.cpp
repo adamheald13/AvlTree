@@ -1,33 +1,97 @@
 #include <iostream>
 #include <queue>
+#include <math.h>
 #include "AvlTree.h"
 using namespace std;
 
 AvlTree::AvlTree() {
+  this->insertComparisons = 0;
+  this->deleteComparisons = 0;
   this->rootNode = 0;
 }
 
 void AvlTree::insert(City city, Node*& current) {
-  if(current == 0) {
+  if(current == 0) { insertComparisons++;
     Node* newNode = new Node(city);
     current = newNode;
-  } else if(city.getName().compare(current->getCity().getName()) < 0) {
+  } else if(city.getName().compare(current->getCity().getName()) < 0) { insertComparisons++;
     insert(city, current->left);
-  } else if(city.getName().compare(current->getCity().getName()) > 0) {
+  } else if(city.getName().compare(current->getCity().getName()) > 0) { insertComparisons++;
     insert(city, current->right);
   }
   balance(current);
 }
 
+void AvlTree::findNearCitites(Node* root, int numberOfCities, int x, int y, int distance) {
+  int numFoundCities = 0;
+
+  queue<Node*> queue;
+  int i = 0;
+  int level = 0;
+
+  if(root != 0) {
+    queue.push(root);
+  }
+  while (queue.size() < numberOfCities)
+  {
+    i = queue.size();
+    while(i > 0) {
+
+      Node* temp = 0;
+      if(queue.front() != 0) {
+        temp = queue.front();
+        City tempCity = temp->getCity();
+
+        if(tempCity.getX() == x && tempCity.getY() == y) {
+          cout << "City with matching coordinates found: "
+               << tempCity.getName() << " ("
+               << tempCity.getX() << ", "
+               << tempCity.getY() << ")" << endl;
+        } else if(withinDistance(x, tempCity.getX(), y, tempCity.getY(), distance)) {
+          this->nearCities[numFoundCities] = tempCity;
+          numFoundCities++;
+        }
+      }
+
+      queue.pop();
+
+      if(temp == 0) {
+        queue.push(0);
+        queue.push(0);
+      } else {
+        if(temp->left != 0) {
+          queue.push(temp->left);
+        } else {
+          queue.push(0);
+        }
+        if(temp->right != 0) {
+          queue.push(temp->right);
+        } else {
+          queue.push(0);
+        }
+      }
+      i--;
+    }
+    level++;
+  }
+  cout << "Cities within specified distance: " << endl;
+
+  for(int i = 0; i < numFoundCities; i++) {
+    cout << this->nearCities[i].getName() << " "
+               << this->nearCities[i].getX() << " "
+               << this->nearCities[i].getY() << endl;
+  }
+}
+
 void AvlTree::deleteByName(string cityName, Node*& current) {
-  if(current == 0) {
+  if(current == 0) { deleteComparisons++;
     return;
   }
-  if(cityName.compare(current->getCity().getName()) < 0) {
+  if(cityName.compare(current->getCity().getName()) < 0) { deleteComparisons++;
     deleteByName(cityName, current->left);
-  } else if(cityName.compare(current->getCity().getName()) > 0) {
+  } else if(cityName.compare(current->getCity().getName()) > 0) { deleteComparisons++;
     deleteByName(cityName, current->right);
-  } else if(current->left != 0 && current->right != 0) {
+  } else if(current->left != 0 && current->right != 0) { deleteComparisons++;
     current->setCity(findMin(current->right));
     deleteByName(current->getCity().getName(), current->right);
   } else {
@@ -170,4 +234,17 @@ int AvlTree::height(Node* node) {
   } else {
     return node->height;
   }
+}
+
+bool AvlTree::withinDistance(int x1, int x2, int y1, int y2, int distance) {
+  // cout << sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1)) << " " << endl;
+  return sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1)) <= distance;
+}
+
+int AvlTree::getInsertComparisons() {
+  return this->insertComparisons;
+}
+
+int AvlTree::getDeleteComparisons() {
+  return this->deleteComparisons;
 }
